@@ -10,7 +10,7 @@
 {{/head}}
 
 {{$propositionHeader}}
-  {{>includes/propositional_navigation}}
+
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -18,11 +18,7 @@
 {{$content}}
 
 
-<div id="global-header-bar">
-  <div class="inner-block">
-    <div class="header-bar"></div>
-  </div>
-</div>
+
 	
 	
 <main id="wrapper" role="main">
@@ -32,27 +28,25 @@
 
 		<a class="back-to-previous" href="transfer-1">Back <span class="visuallyhidden"> to the previous question</span></a>
 
-        <h1 class="heading-24">
+        <h2 class="heading-large">
           Select trader address
-        </h1>
+        </h2>
 		
 		
 		
 		<p>
-			<span class="visuallyhidden">Trader</span>
-			<span class="visuallyhidden">:</span>
-			<span class="details">bob's motors</span>
-			
-			
+			<span>Trader name</span><br />
+			<span class="details" style="font-weight:700;text-transform:capitalize">bob's motors</span>
 		</p>
 		
 		
 		<p>
-			<span class="visuallyhidden">Postcode</span>
-			<span class="visuallyhidden">:</span>
-			<span class="postcode">SA15 5LP</span>
-			<a href="/register-to-vote/address" class="change-postcode-button">
-				Change<span class="visuallyhidden"> your postcode</span>
+			<span>Postcode</span><br />
+
+			<span class="postcode" style="font-weight:700;text-transform:capitalize">{{playback-postcode}}</span>
+
+			<a href="transfer-1" class="change-postcode-button" style="padding-left:3em">
+				Change<span class="visuallyhidden"> postcode</span>
 			</a>
 		</p>
 		
@@ -91,7 +85,7 @@
 			  
 			  
 			  
-			  <a href="/register-to-vote/address/manual" class="toggle">
+			  <a href="transfer-2-manual">
 			          I can’t find my address in the list<span class="visuallyhidden"> section</span>
 			      </a>
 		  

@@ -67,7 +67,22 @@ module.exports = {
       res.render('finish', {'assetPath' : assetPath});
     }
 
-})
+    });
+
+
+
+    /* - - - - - - - - - - - - - -  */
+    /* Pages for Vehicle Management */
+
+    app.get('/vm/postcode', function (req, res) {
+
+    var y = req.query.postcode;
+
+    res.render('vm/transfer-2', {'assetPath' : assetPath, 'playback-postcode' : y})
+
+    });
+
+
 
 
 
