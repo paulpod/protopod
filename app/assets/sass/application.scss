@@ -764,4 +764,24 @@ padding:0.4em 0.2em 0.4em 0.5em;
 
 
 
+/* Parts for the Long Flows eg. Buying a car  */
+.summary-step {
+  background-color: $grey-4;
+  padding: 1.2em 1em 1em 1em;
+  border-bottom: 2px $grey-3 solid;
+}
+.summary-step .details {
+font-weight: bold;
+}
+.summary-step .car-reg {
+font-size: 1em;
+background-color: #fe2;
+font-weight: bold;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+border: solid $black 3px;
+padding: 0.15em 0.5em 0 0.5em;
+margin: 0 0.5em;
+}
 
