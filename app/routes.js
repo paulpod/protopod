@@ -3,6 +3,13 @@ module.exports = {
     app.get('/', function (req, res) {
       res.render('index',
                 {'assetPath' : assetPath});
+
+
+      var http = require('http');
+      var https = require('https');
+
+
+
     });
 
     
@@ -82,6 +89,29 @@ module.exports = {
 
     });
 
+
+
+    /* - - - - - - - - - - - - - - - */
+    /* Using idealpostcode on NodeJs */
+
+    app.get('/vm-full/newkeeper-postcode', function (req, res) {
+
+      var Handlebars = require('Handlebars');
+
+      var postcode = req.query.postcode;
+
+      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
+
+        res.render('vm-full/new-keeper-address.html', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+
+      });
+
+    });
 
 
 

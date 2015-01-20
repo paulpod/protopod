@@ -8,6 +8,8 @@
   <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
   
   <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/postcodes.min.js"></script>
   
 
   
@@ -27,7 +29,7 @@
   <div id="content">
     <div class="inner-block">
 
-    		<a class="back-to-previous" href="#">Back<span class="visuallyhidden"> to your driving licence</span></a>
+    		<a class="back-to-previous" href="#">Back<span class="visuallyhidden"> to the start</span></a>
 
 		
 		
@@ -36,7 +38,7 @@
 	
 	
 	<h2 class="heading-large">
-	Change address
+	New keeper details
 	</h2>
 
 
@@ -50,41 +52,93 @@
 	<div id="your-details">
 
 
-	<!-- <ul class="ul-data">
-
-		<li><span>Licence valid from</span><strong>15 Oct 2013</strong></li>
-
-		<li><span>Licence valid to</span><strong>22 Dec 2014 </strong></li>
-
-		<li><span>Driving licence number</span><strong>CLEGH710023PJ9BL</strong></li>
-
-		<li><span>Licence issue number</span><strong>12</strong></li>
-
-	</ul>
-
-	-->
-
-    
-   
-    
-    
-	<!-- end #your-details -->
 
 
-
+	<form method="get" action="newkeeper" class="form">
 
 	<fieldset>
 
+
+		<!-- the following items are required -->
+
+		<label class="form-label" for="newkeeper-name">
+		<h2 class="heading-medium">Name</h2>
+		</label>
+		<input type="text" class="form-control form-control-1-2" id="newkeeper-name">
+
+
+
+
+		<label class="form-label" for="address">
+		<h2 class="heading-medium">Address</h2>
+		</label>
+
+
+		<!-- Add a div to house your postcode input field -->
+		<div id="lookup_field"></div>
+
+		<!-- This is your existing form -->
+		<div id="address-output" class="hidden">
+		<label>Address Line One</label>
+		<input id="first_line" name="first_line" class="form-control form-control-1-2" type="text">
+
+		<label>Address Line Two</label>
+		<input id="second_line" name="second_line" class="form-control form-control-1-2" type="text">
+
+		<label>Address Line Three</label>
+		<input id="third_line" name="third_line" class="form-control form-control-1-2" type="text">
+
+		<label>Post Town</label>
+		<input id="post_town" name="post_town" class="form-control form-control-1-2" type="text">
+
+		<label>Postcode</label>
+		<input id="postcode" name="postcode" class="form-control form-control-1-4" type="text">
+		</div>
+
+
+		<script>
+		// Add this after your form
+		$('#lookup_field').setupPostcodeLookup({
+		  // Add your API key
+		  api_key: 'ak_i0ze7k03RQwMtjncypybi4nQOE97T',
+		  // Identify your fields with CSS selectors
+		  output_fields: {
+		    line_1: '#first_line',  
+		    line_2: '#second_line',         
+		    line_3: '#third_line',
+		    post_town: '#post_town',
+		    postcode: '#postcode'
+		  }
+		});
+
+		var foo = 0;
+
+		if(foo > 0) {
+			$("#address-output").attr('class', 'show');
+		}
+		</script>
+		
+
+
+
+		
+
+		<!-- the following items are optional 
+
+		<h2 class="heading-small visuallyhidden">
+		The following items are optional
+		</h2>
+
 		<div class="form-group">
-			<label class="form-label" for="address-postcode"><h2 class="heading-medium">Your driver number</h2></label>
-			<input type="text" class="form-control form-control-1-2" id="address-postcode">
-			<p class="form-hint">Example: MORGA657054SM9IJ</p>
+			<label class="form-label" for="newkeeper-dln"><h2 class="heading-medium">Keeper's driver number</h2></label>
+			<input type="text" class="form-control form-control-1-2" id="newkeeper-dln">
+			<p class="form-hint">Found on a UK driving licence. Example: MORGA657054SM9IJ</p>
 		</div>
 
 
 		<details style="padding-bottom:2em" class="grid grid-2-3">
 		<summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true">
-			<span class="summary">Help finding your driver number</span>
+			<span class="summary">Help finding driver number</span>
 		</summary>
 		<div class="" id="details-content-0" aria-hidden="false" style="display:block;border-left:none">
 		
@@ -93,12 +147,12 @@
 		<p><img src="/public/images/photocard-driver-number.png" width="255" height="50"></p>
 			
 		</div>
-		</details>
+		</details> -->
 
 
-		<div class="form-group">
-		<a href="change-address-0-ninum" class="button">Next</a>
-		</div>
+		<div class="form-group" style="margin-top:4em">
+			<input type="submit" class="button" value="Continue">
+        </div>
 
 		
 

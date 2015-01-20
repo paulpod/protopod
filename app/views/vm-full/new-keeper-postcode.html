@@ -1,0 +1,113 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  
+ 
+  
+  <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+  
+  <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/postcodes.min.js"></script>
+  
+
+  
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_blank}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+
+
+<main id="wrapper" role="main">
+  <div id="content">
+    <div class="inner-block">
+
+    		<a class="back-to-previous" href="#">Back<span class="visuallyhidden"> to the start</span></a>
+
+		
+		
+		
+	<article>
+	
+	
+	<h2 class="heading-large">
+	New keeper details
+	</h2>
+
+
+
+
+
+	<div id="your-details">
+
+
+
+
+	<form method="get" action="newkeeper-postcode" class="form">
+
+	<fieldset>
+
+
+		<!-- the following items are required -->
+
+		<label>Postcode</label>
+
+		<input id="postcode" name="postcode" class="form-control form-control-1-4" type="text">
+
+
+
+
+
+		<div class="form-group" style="margin-top:4em">
+			<input type="submit" class="button" value="Find address">
+        </div>
+
+		
+
+	</fieldset>
+
+
+
+
+	
+	
+	
+
+	
+
+
+
+</article>		
+
+<!-- hide this next action button 
+<form action="get" class="form" style="margin-top:2.5em">
+	<fieldset>
+		<div style="float:left;padding-right:1em">
+		  <input type="submit" class="button" value="Finish">
+		</div>
+	  
+
+		<div>
+		  <p><a href="transfer-3">
+			Search for another vehicle
+		</a></p>
+		</div>
+
+	</fieldset>
+</form>
+-->
+                
+
+    </div>
+  </div>
+</main>
+{{/content}}
+
+{{/govuk_template}}

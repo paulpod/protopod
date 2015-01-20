@@ -36,7 +36,7 @@
 		
 		<p>
 			<span>Trader name</span><br />
-			<span class="details" style="font-weight:700;text-transform:capitalize">bob's motors</span>
+			<span class="details" style="font-weight:700;text-transform:capitalize">{{playback-tradername}}</span>
 		</p>
 		
 		
@@ -66,21 +66,21 @@
 		  
 		  
 		  <fieldset>
-		          <input type="hidden" id="address_postcode" name="address.postcode" value="SA15 5LP" class="text hidden">
+	          <input type="hidden" id="address_postcode" name="address.postcode" value="SA15 5LP" class="text hidden">
 
-		          <label for="address_uprn">
-		              <span class="visuallyhidden">Select your </span>Address
-		          </label>
-		          <div class="validation-wrapper ">
-		              <select id="address_uprn" name="address.uprn" class="lonely validate " data-validation-name="addressSelect" data-validation-type="field" data-validation-rules="nonEmpty">
-		                  <option value="">4 addresses found</option>
-		                  <option value="10009172278">Pantyffynnon Farm, Pontyberem, Llanelli, Carmarthenshire</option>
-		                  <option value="10004881783">Plas Uchaf, Pontyberem, Llanelli, Carmarthenshire</option>
-		                  <option value="10004881784">Ty Newydd Farm, Pontyberem, Llanelli, Carmarthenshire</option>
-		                  <option value="10004881785">Tyn Ton Farm, Pontyberem, Llanelli, Carmarthenshire</option>
-		              </select>
-		          </div>
-		      </fieldset>
+	          <label for="address_uprn">
+	              <span class="visuallyhidden">Select your </span>Address
+	          </label>
+	          <div class="validation-wrapper " style="padding:0.33em 0 1em 0">
+	              <select id="address_uprn" name="address.uprn" class="lonely validate " data-validation-name="addressSelect" data-validation-type="field" data-validation-rules="nonEmpty">
+	                  <option value="">4 addresses found</option>
+	                  <option value="10009172278">Pantyffynnon Farm, Pontyberem, Llanelli, Carmarthenshire</option>
+	                  <option value="10004881783">Plas Uchaf, Pontyberem, Llanelli, Carmarthenshire</option>
+	                  <option value="10004881784">Ty Newydd Farm, Pontyberem, Llanelli, Carmarthenshire</option>
+	                  <option value="10004881785">Tyn Ton Farm, Pontyberem, Llanelli, Carmarthenshire</option>
+	              </select>
+	          </div>
+	      </fieldset>
 			  
 			  
 			  
@@ -100,7 +100,7 @@
        
 
            
-            <div class="form-group">
+            <div class="form-group" style="padding-top:2em">
 				<a href="transfer-3" class="button">Next</a>
               <!-- <input type="submit" class="button" value="Next"> -->
 

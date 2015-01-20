@@ -30,13 +30,16 @@
           Provide trader details
         </h2>
 
-        <form method="get" action="postcode" class="form">
+        <form method="get" action="trader" class="form">
+        <!-- this is the form that gets sent and picked up in routes.js -->
 
           <fieldset>
 
+          <!-- the form sends both tradername and postcode to populate the next page -->
+
              <div class="form-group form-group-compound">
-              <label class="form-label" for="address-line-1">Trader name</label>
-              <input type="text" class="form-control" id="trader-name">
+              <label class="form-label" for="address-line-1">Trader business name</label>
+              <input type="text" class="form-control" id="tradername" name="tradername">
             </div>
 			
 
